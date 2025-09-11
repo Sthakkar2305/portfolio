@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Main color palette */
+    --background: 220 25% 5%;
+    --foreground: 210 20% 95%;
+    
+    /* Surface colors */
+    --surface: 220 20% 8%;
+    --surface-elevated: 220 15% 12%;
+    --surface-muted: 220 10% 15%;
+    
+    /* Brand colors */
+    --primary: 195 100% 50%;
+    --primary-glow: 195 100% 60%;
+    --primary-dark: 195 100% 40%;
+    --primary-foreground: 220 25% 5%;
+    
+    /* Accent colors */
+    --accent: 280 100% 70%;
+    --accent-glow: 280 100% 80%;
+    --accent-foreground: 220 25% 5%;
+    
+    /* Text colors */
+    --text-primary: 210 20% 95%;
+    --text-secondary: 210 15% 75%;
+    --text-muted: 210 10% 50%;
+    
+    /* Component colors */
+    --card: 220 20% 8%;
+    --card-foreground: 210 20% 95%;
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 195 100% 50%;
+    
+    /* Semantic colors */
+    --success: 120 100% 50%;
+    --warning: 45 100% 50%;
+    --error: 0 100% 60%;
+    
+    /* Design tokens */
+    --radius: 0.75rem;
+    --shadow-sm: 0 2px 4px -1px hsl(220 25% 5% / 0.1);
+    --shadow-md: 0 4px 12px -2px hsl(220 25% 5% / 0.15);
+    --shadow-lg: 0 8px 32px -4px hsl(220 25% 5% / 0.25);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-surface: linear-gradient(135deg, hsl(var(--surface)), hsl(var(--surface-elevated)));
+    --gradient-text: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    
+    /* Animation durations */
+    --transition-fast: 0.15s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: hsl(var(--background));
+    color: hsl(var(--text-primary));
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--surface));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
+  }
+}
+
+@layer components {
+  /* Custom component classes */
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-effect {
+    background: hsl(var(--surface) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.3);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-24;
+  }
+}
