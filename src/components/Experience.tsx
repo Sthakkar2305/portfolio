@@ -10,7 +10,7 @@ const timelineData = [
     title: 'Freelance Web Developer',
     company: 'Balkrushna Jewellers',
     location: 'Remote',
-    duration: '2023 - Present',
+    duration: 'july-2025 - oct-2025',
     description: 'Independently sourced and delivered a comprehensive e-commerce website project. Led the complete development lifecycle from requirements gathering to deployment.',
     achievements: [
       'Delivered a fully functional e-commerce platform',
@@ -24,13 +24,27 @@ const timelineData = [
     title: 'Freelance Web Developer',
     company: 'Tapovan School',
     location: 'Gujarat, India',
-    duration: '2023',
+    duration: 'jan-2025 - Apr-2025',
 description: 'Developed a school stock management system to streamline inventory tracking, reporting, and resource allocation.',  
 achievements: [
   'Built a web-based platform for managing school inventory',
   'Automated stock tracking and reporting to reduce manual errors',
   'Implemented role-based access for secure and efficient management',
   'Improved overall efficiency of school resource distribution'
+]
+  },
+  {
+    type: 'experience',
+    title: 'Freelance Web Developer',
+    company: 'SONNECT-UTILITIES',
+    location: 'Ahemdabad Gujarat, India',
+    duration: 'nov-2025 - present',
+description: 'Developed the Sonnect Utility – SolarRath-X website, featuring a modern 3D informatics-style interface',  
+achievements: [
+  'Built the Sonnect Utility SolarRath-X 3D website with an immersive informatics-style design',
+  'Implemented interactive 3D components to visualize solar utility systems and information flow',
+  'Optimized performance and responsiveness for seamless cross-device user experience',
+  'Enhanced digital presence with a futuristic UI emphasizing innovation and clean-energy technology'
 ]
   },
 
